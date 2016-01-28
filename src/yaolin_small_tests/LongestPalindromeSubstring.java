@@ -32,7 +32,7 @@ public class LongestPalindromeSubstring {
 		// update the rest of the substrings (length == 3, length == 4 ... length == n)
 		for(int length = 3; length <= len; length++) {
 			for(int p = 0; p < len - length; p++) {
-				int q = p + length - 1;
+				int q = p + length - 1;  ///////// need to -1 so the length is
 				if(s.charAt(p) == s.charAt(q) && dp[p+1][q-1]){
 					dp[p][q] = true;
 					maxLen = length;
