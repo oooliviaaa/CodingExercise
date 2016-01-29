@@ -27,21 +27,18 @@ public class PriorityQueueTest{
 
 
 
- class StringLengthComparator implements Comparator<String>{
+class StringLengthComparator implements Comparator<String>{
     @Override
-    public int compare(String x, String y)
-    {
+    public int compare(String x, String y) {
         // Assume neither string is null. Real code should
         // probably be more robust
         // You could also just return x.length() - y.length(),
         // which would be more efficient.
     	
-        if (x.length() < y.length())
-        {
+        if (x.length() < y.length()){
             return -1;  // if negative, sort as (x, y)
         }
-        if (x.length() > y.length())
-        {
+        if (x.length() > y.length()){
             return 1;  // if positive, sort as (y, x)
         }
         return 0;      // if tie, sort as (x, y)
